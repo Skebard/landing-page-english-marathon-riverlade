@@ -9,7 +9,9 @@ html *{
 }
 
 body{
-    scroll-snap-type: x mandatory;
+    font-family: 'Roboto', sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
     
 }
 main {
@@ -25,7 +27,8 @@ ul{
 }
 
 p{
-    font-size:2rem;
+    font-size:2.5rem;
+
 }
 img{
     display:block;
@@ -55,11 +58,12 @@ figure img{
 }
 .initial-page  figcaption{
     position:absolute;
-    top:10%;
+    top:8%;
     width:100%;
     display:flex;
     justify-content: center;
-    color:black;
+    color:white;
+    font-weight: lighter;
 }
 
 .initial-page .bg{
@@ -85,7 +89,7 @@ figure img{
 
 
 .round-background{
-    background-color:yellow;
+    background-color:#040cb3;
     border-radius:3rem;
     text-align:center;
     font-size: 2.5rem;
@@ -93,16 +97,16 @@ figure img{
 }
 
 .blur-border{
-    box-shadow: 0px 0px 1rem yellow;
+    box-shadow: 0px 0px 1rem 0.4rem #040cb3;
 }
 
 .initial-page .image-content{
     position: absolute;
-    bottom: 5%;
+    bottom: 7.5%;
     width:100%;
     display:flex;
     flex-direction: column;
-    text-align:center;
+   
     color:white;
 }
 
@@ -115,16 +119,27 @@ h2{
 a{
     display: inline-block;
     text-decoration: none;
-    color:black;
+    color:white;
 }
 .initial-page .image-content *{
     text-align:center;
 }
-.initial-page .image-content > h1{
+
+
+.initial-page svg{
+	background-color:none;
+    width:80vw;
+    height:11rem;
     letter-spacing: 1rem;
-    color:yellow;
-    margin-bottom: 3rem;
-    transform: scale(1,1.5);
+    text-shadow: 0.4rem 0.4rem 1rem #040cb3,-0.4rem 0.4rem 1rem #040cb3,0.4rem -0.4rem 1rem #040cb3,-0.4rem -0.4rem 1rem #040cb3;
+    margin: 0 auto;
+    transform: scale(1.25,1.5);
+}
+
+
+.initial-page .image-content > h2{
+    transform:scale(1,1.25);
+    font-weight: lighter;
 }
 
 
@@ -156,7 +171,7 @@ body .datablock-xl{
     top: 80vh;
     height:7rem;
     width:7rem;
-    background-color: yellow;
+    background-color: #040cb3;
     margin-left:auto;
     margin-right:1vw;
     z-index:20;
@@ -172,10 +187,12 @@ body .datablock-xl{
     display:block;
     font-style: italic;
     font-size: 2rem;
-    letter-spacing: 0.2rem;
-    border-bottom: 4px solid yellow;
+    border-bottom: 4px solid #040cb3;
     padding-bottom: 1rem;
     margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.4rem;
 }
 .image-content .buttons > a{
     margin-top:10rem;
@@ -184,6 +201,30 @@ body .datablock-xl{
 }
 
 /*  PART 2  */
+.part2 .bg{
+    width:100%;
+    height:60vw;
+    background-color:black;
+    position:relative;
+}
+.part2 .blurred-border{
+    position:absolute;
+    height:47vw;
+    width: 90vw;
+    top:0;
+    background-image: url("https://images.justwatch.com/backdrop/5929900/s1440/riverdale");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left:auto;
+    margin-right:auto;
+    left:0;
+    right:0;
+    box-shadow: inset 0px 0px 10rem 6rem black;
+}
+
+
+
+
 .part2 {
     background-color:black;
 }
@@ -203,8 +244,8 @@ body .datablock-xl{
 
 .separation-line{
     height:0.2rem;
-    background-color:yellow;
-    box-shadow: 0px 0 1rem 0.2rem yellow;
+    background-color:#040cb3;
+    box-shadow: 0px 0 1rem 0.4rem #040cb3;
     margin: 1.2rem 0;
 }
 
@@ -237,15 +278,24 @@ body .datablock-xl{
 }
 .part3 .pics > img:first-child{
 
-    width:40vw;
-    height:28.5vw;
+    width:44.5vw;
+    height:20vw;
     margin-right:5rem;
+    background-image: url("../Images/lapdop.png");
+    background-size:70%;
+    background-repeat: no-repeat;
+    background-position: 54% 30%;
+    margin-top:4rem;
+
 }
 .part3 .pics > img:last-child{
     width:15vw;
-    height:28.5vw;
+    height:28vw;
     margin-right:10rem;
-  
+    background-image: url("../Images/phoneapp.jpg");
+    background-size:95%;
+    background-repeat: no-repeat;
+    background-position:center 1em;
 }
 
 .part3 > .main-content > p:nth-child(2){
@@ -256,11 +306,26 @@ body .datablock-xl{
     display:flex;
     justify-content:center;
     align-items: top;
+    flex-direction:row;
+    margin-top:5rem;
 }
 
-.part3 .img-text> img{
-    width:35%;
-    height:39%;
+.part3 .img-text .perspec{
+    position: relative;
+    perspective: 50vw;
+
+}
+.part3 .img-text img{
+    width:14vw;
+    height:27vw;
+    margin-right:10rem;
+    background-image: url("../Images/phoneapp2.jpg");
+    background-size:83%;
+    background-repeat: no-repeat;
+    background-position:center 1rem;
+    transform-style: preserve-3d;
+    transform: rotatey(45deg);
+
 }
 .part3 .img-text> p{
     margin-top: 5rem;
@@ -290,7 +355,7 @@ body .datablock-xl{
 }
 .part4 .my-check{
     font-size:5rem;
-    color:yellow;
+    color:#040cb3;
     margin-right:5rem;
 }
 
@@ -301,10 +366,11 @@ body .datablock-xl{
 
 /* PART 5 */
 .part5 {
-    background-color:yellow;
+    background-color:#040cb3;
+    color:white;
 }
 .part5 .title-grad{
-    background-image:linear-gradient(black,rgb(248, 231, 78),yellow);
+    background-image:linear-gradient(black,#040cb3);
     padding-top:3rem;
 }
 
@@ -318,7 +384,6 @@ body .datablock-xl{
 .part6{
     text-align: center;
     background-color:#d6d6d6;
-    padding-top: 4rem;
 }
 .part6 > img, .part6 .text-info{
     width: 70vw;
@@ -327,14 +392,16 @@ body .datablock-xl{
 }
 
 .part6 > img{
-    box-shadow: 0px 0px 5rem yellow;
+    box-shadow: 0px 0px 5rem #040cb3;
     object-fit: cover;
+    
 }
 
 .part6 .text-info{
     position:relative;
     top:-5vw;
-    background-color:yellow;
+    background-image: radial-gradient(darkgrey,darkgrey,#040cb3);
+    box-shadow: 0px 0px 5rem #040cb3;
     height: 47vw;
     display:flex;
     flex-flow:column;
@@ -346,17 +413,29 @@ body .datablock-xl{
     width:70%;
     text-align:left
 }
+.part6 .title-grad:first-child{
+     background-image:linear-gradient(#040cb3, #d6d6d6);
+    padding-top:13rem;
+}
+.part6 .title-grad:last-child{
+     background-image:linear-gradient(#d6d6d6, black);
+    padding-top:13rem;
+}
 
 /* PART 7 */
 .part7{
     display:flex;
     flex-direction:column;
     align-items:center;
+    background-color:black;
+    padding-bottom:3rem;
 }
 .part7 > h2{
+    margin-top:3rem;
     transform: scale(1.4,1);
-    color: black;
-    text-shadow: -0.2rem 0  yellow;
+    color: white;
+    text-shadow: -0.3rem 0  #040cb3;
+    font-size:5rem;
 }
 
 .rates{
@@ -373,10 +452,13 @@ body .datablock-xl{
     flex: 0 0 45%;
     border-radius:5rem;
     padding: 2rem;
-    background-color:yellow;
-    box-shadow: 0.5rem 0.5rem 1rem black;
+    background-color:#ffffff;
+    box-shadow: 0.5rem 0.5rem 1rem white;
     margin-bottom: 2rem;
     padding-bottom:10rem;   /*space for button*/
+}
+.rates > li:last-child{
+    box-shadow: 0 0 3rem 2rem #040cb3;
 }
 .rates > li > h3 {
     font-size: 3.5rem;
@@ -390,7 +472,7 @@ body .datablock-xl{
 .rates > li > h3 > em::after {
     content:" ";
     position:absolute;
-    height:0.2rem;
+    height:0.3rem;
     width:100%;
     background-color:red;
     top:0;
@@ -422,8 +504,8 @@ body .datablock-xl{
     justify-content:center;
 }
 .rates a{
-    background-color:red;
-    box-shadow: 0px 0px 1rem red;
+    background-color:#040cb3;
+    box-shadow: 0px 0px 1rem 0.4rem #040cb3;
 }
 
 .rates > li > ul > li >  p{
@@ -436,4 +518,45 @@ body .datablock-xl{
     border: 0.3rem solid black;
     border-radius:3rem;
 
+}
+/* PART 8 */
+.part8{
+ position:relative;
+}
+
+.part8 .title-grad{
+    background-image:linear-gradient(black,white);
+    padding-top: 5rem;
+
+}
+
+
+.interrogation-bg{
+    font-size: 20rem;
+    text-shadow: 0 0 1rem #040cb3;
+    position:absolute;
+    top: 4rem;
+    left:18rem;
+    -ms-transform: rotate(-20deg); /* IE 9 */
+    transform: rotate(-20deg);
+  
+}
+
+.why-me{
+    width: 65%;
+    margin:0 auto;
+    margin-top: 7rem;
+}
+
+.why-me li{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+}
+.why-me li h1{
+    padding-right:2rem;
+    font-size: 9rem;
+    font-weight: 900;
+    color:#040cb3;
+  
 }
